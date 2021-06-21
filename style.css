@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --f-f:'Open Sans Condensed', sans-serif;
+    --color :rgb(156, 117, 8);
+}
+
+body{
+    background-color: rgba(212, 234, 255, 0.568);
+}
+
+header{
+    padding: 7rem;
+    text-align: center;
+}
+
+header h1{
+    font-family: var(--f-f);
+    font-weight: 600;
+    font-size: 3rem;
+    position: relative;
+}
+
+header h1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1rem;
+    border: 2px solid rgb(156, 117, 8);
+    width: 3rem;
+    margin: 0 auto;
+}
+
+header .btns{
+    margin-top: 3rem;
+}
+
+header .btns button{
+    width: 7rem;
+    padding: .7rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    color: var(--color);
+    border: 2px solid var(--color);
+    background-color: transparent;
+    cursor: pointer;
+    margin: .5rem;
+    transition: all 400ms ease-in-out;
+}
+
+header .btns button:hover{
+    color: #fff;
+    background-color: var(--color);
+}
+
+section{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section .menu-flex{
+    display: flex;
+    justify-content: space-between;
+    width: 33rem;
+    margin:1.5rem 0;
+}
+
+section .menu-flex img{
+    width: 15rem;
+    border: 4px solid var(--color);
+    border-radius: .5rem;
+}
+
+section .menu-price{
+    width: 51%;
+
+}
+
+section .price-flex{
+    position: relative;
+}
+
+section .menu-flex p{
+    margin-top: 2rem;
+    font-size: .9rem;
+    color: rgb(110, 102, 102);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section .price-flex h2{
+    font-family: var(--f-f);
+    letter-spacing: .1rem;
+    font-size: 1.3rem;
+}
+
+section .price-flex::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1rem;
+    border: 1px dotted var(--color);
+}
+
+section .menu-price .price-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1350px){
+
+    section{
+        justify-content: center;
+    }
+
+    header .btns button{
+        width: 6rem;
+        padding: .5rem;
+    }
+    
+}
+
+@media(max-width : 768px){
+
+    header .btns button{
+        width: 5rem;
+        padding: .4rem;
+        font-size: .8rem;
+    }
+}
+
+
+@media(max-width:650px){
+    section .menu-flex{
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 3rem;
+    }
+
+    section .menu-price{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    header h1{
+        font-size: 2rem;
+    }
+
+    section .menu-flex img{
+        width: 20rem;
+    }
+}
